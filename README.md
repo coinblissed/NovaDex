@@ -1,7 +1,7 @@
 # Aura DEX | Next-Gen Soroban AMM
 
 ![CI Status](https://github.com/shivaywww-design/Aura-Dex/actions/workflows/ci.yml/badge.svg)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-blue?style=for-the-badge&logo=vercel)](https://aura-dex.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-blue?style=for-the-badge&logo=vercel)](https://aura-dex-gamma.vercel.app/)
 
 A high-fidelity, mobile-responsive Decentralized Exchange (DEX) built on **Stellar Soroban**. This application implements a Constant Product Automated Market Maker (AMM) that allows users to swap between **Native XLM** and **Aura Engine (SDKE)** tokens using Stellar Asset Contracts (SAC).
 
