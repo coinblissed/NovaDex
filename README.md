@@ -50,6 +50,9 @@ The Aura DEX features a bespoke design system called **Aura Glass**, which empha
 ### Mobile Responsive View
 ![Mobile](https://raw.githubusercontent.com/shivaywww-design/Aura-Dex/main/public/screenshots/mobile.png)
 
+### Video Walkthrough
+![Demo Walkthrough](https://raw.githubusercontent.com/shivaywww-design/Aura-Dex/main/public/screenshots/demo.gif)
+
 
 ## 🛠 Installation & Local Development
 
