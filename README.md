@@ -68,6 +68,22 @@ The Aura DEX features a bespoke design system called **Aura Glass**, which empha
 ![Demo Walkthrough](https://raw.githubusercontent.com/shivaywww-design/Aura-Dex/main/public/screenshots/demo.gif)
 
 
+## 🧪 Testing
+
+The smart contracts are thoroughly tested using the Soroban SDK. To run the tests:
+
+```bash
+cd contracts
+cargo test --workspace
+```
+
+### Test Coverage
+- **Token**: 4 tests (Minting, Transfers, Allowances, Auth)
+- **Pool**: 4 tests (Liquidity, Swaps, Quotes, Stats)
+- **Factory**: 3 tests (Registration, Pagination, Dup Prevention)
+
+**Result:** `11 passed; 0 failed`
+
 ## 🛠 Installation & Local Development
 
 1. **Clone the repository**:
