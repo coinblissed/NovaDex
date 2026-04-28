@@ -1,6 +1,6 @@
 # NovaDEX | Next-Gen Soroban AMM
 
-![CI Status](https://github.com/coinblissed/NovaDex/actions/workflows/ci.yml/badge.svg) ![CD Status](https://github.com/coinblissed/NovaDex/actions/workflows/cd.yml/badge.svg)
+![CI Status](https://github.com/ham-gif/shubham12/actions/workflows/ci.yml/badge.svg) ![CD Status](https://github.com/ham-gif/shubham12/actions/workflows/cd.yml/badge.svg)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://mellifluous-clafoutis-bb81ac.netlify.app/)
 
 A high-fidelity, mobile-responsive Decentralized Exchange (DEX) built on **Stellar Soroban**. This application implements a Constant Product Automated Market Maker (AMM) that allows users to swap between **Native XLM** and **Nova Engine (SDKE)** tokens using Stellar Asset Contracts (SAC).
@@ -96,7 +96,7 @@ cargo test --workspace
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/coinblissed/NovaDex.git
+   git clone https://github.com/ham-gif/shubham12.git
    cd NovaDEX/frontend
    ```
 
