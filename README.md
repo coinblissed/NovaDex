@@ -1,7 +1,7 @@
 # NovaDEX | Next-Gen Soroban AMM
 
-![CI Status](https://github.com/shivaywww-design/Aura-Dex/actions/workflows/ci.yml/badge.svg)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-blue?style=for-the-badge&logo=vercel)](https://aura-dex-gamma.vercel.app/)
+![CI Status](https://github.com/coinblissed/NovaDex/actions/workflows/ci.yml/badge.svg)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://mellifluous-clafoutis-bb81ac.netlify.app/)
 
 A high-fidelity, mobile-responsive Decentralized Exchange (DEX) built on **Stellar Soroban**. This application implements a Constant Product Automated Market Maker (AMM) that allows users to swap between **Native XLM** and **Nova Engine (SDKE)** tokens using Stellar Asset Contracts (SAC).
 
@@ -30,7 +30,7 @@ The NovaDEX features a bespoke design system called **Cyber-Holographic**, which
 - **Frontend**: React 18, TypeScript, Vite
 - **Styling**: Tailwind CSS (Aura Glass Design System)
 - **Stellar Interaction**: `@stellar/stellar-sdk`, `@creit.tech/stellar-wallets-kit`
-- **Deployment**: Vercel
+- **Deployment**: Netlify
 
 ## 📜 Contract Details (Testnet)
 
@@ -86,7 +86,7 @@ cargo test --workspace
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/shivaywww-design/NovaDEX.git
+   git clone https://github.com/coinblissed/NovaDex.git
    cd NovaDEX/frontend
    ```
 
@@ -104,4 +104,4 @@ cargo test --workspace
 This project uses GitHub Actions for automated linting and build verification. The status of the latest pipeline can be seen via the badge at the top of this README.
 
 ## ⚖️ License
-MIT License. Created for the Stellar Global Hackathon.
+MIT License. Created by [coinblissed](https://github.com/coinblissed) for the Stellar Global Hackathon.
