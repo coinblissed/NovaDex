@@ -1,4 +1,4 @@
-# NovaDEX | Next-Gen Soroban AMM
+# MinSwap | Next-Gen Soroban AMM
 
 ![CI Status](https://github.com/coinblissed/NovaDex/actions/workflows/ci.yml/badge.svg) ![CD Status](https://github.com/coinblissed/NovaDex/actions/workflows/cd.yml/badge.svg)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://mellifluous-clafoutis-bb81ac.netlify.app/)
@@ -17,7 +17,7 @@ A high-fidelity, mobile-responsive Decentralized Exchange (DEX) built on **Stell
 
 ## 🎨 Cyber-Holographic Design System
 
-The NovaDEX features a bespoke design system called **Cyber-Holographic**, which emphasizes:
+The MinSwap features a bespoke design system called **Cyber-Holographic**, which emphasizes:
 - **Sharp Geometries**: Moving away from soft rounded corners to intentional, high-tech edges.
 - **Cyberpunk Palette**: Heavy use of Neon Pink, Neon Cyan, and Electric Purple.
 - **Glowing Accents**: Subtle micro-animations and glow effects that make the interface feel alive.

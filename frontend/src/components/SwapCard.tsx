@@ -195,7 +195,7 @@ export const SwapCard: React.FC = () => {
                   <Zap className="absolute inset-0 m-auto w-8 h-8 text-primary animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-black tracking-tighter mb-2 text-white uppercase">{txStatus.step}</h3>
-                <p className="text-[10px] text-slate-500 font-mono tracking-widest animate-pulse">TRANSMITTING TO NOVA NETWORK...</p>
+                <p className="text-[10px] text-slate-500 font-mono tracking-widest animate-pulse">TRANSMITTING TO MINSWAP NETWORK...</p>
                 {txStatus.hash && (
                   <p className="mt-6 text-[10px] text-primary font-mono bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                     TX: {txStatus.hash.slice(0, 8)}...{txStatus.hash.slice(-8)}
