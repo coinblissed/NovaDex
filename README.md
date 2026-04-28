@@ -71,6 +71,11 @@ The NovaDEX features a bespoke design system called **Cyber-Holographic**, which
 
 
 
+### Video Walkthrough
+
+![Demo Walkthrough](public/screenshots/demo.gif)
+
+
 ## 🧪 Testing
 
 The smart contracts are thoroughly tested using the Soroban SDK. To run the tests:
