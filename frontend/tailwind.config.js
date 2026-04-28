@@ -7,24 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#09090b", // Zinc 950
-        surface: "#121214", // Dark surface
-        border: "#27272a", // Zinc 800
+        background: "#080711", // Deep Space Carbon
+        surface: "rgba(18, 16, 38, 0.6)", // Holographic Dark Slate
+        border: "rgba(0, 240, 255, 0.15)", // Glowing Cyan Border
         primary: {
-          DEFAULT: "#ffffff", // White
-          hover: "#e4e4e7", // Zinc 200
+          DEFAULT: "#ff007a", // Neon Pink
+          hover: "#d40066",
         },
         secondary: {
-          DEFAULT: "#a1a1aa", // Zinc 400
-          hover: "#71717a", // Zinc 500
+          DEFAULT: "#00f0ff", // Neon Cyan
+          hover: "#00c8d4",
         },
-        accent: "#27272a", // Zinc 800
-        success: "#22c55e", // Green 500
-        warning: "#eab308",
-        danger: "#ef4444",
-        tokenA: "#ffffff",
-        tokenB: "#a1a1aa",
-        lpToken: "#71717a",
+        accent: "#8a2be2", // Electric Purple
+        success: "#00ff88", // Neon Green
+        warning: "#ffaa00",
+        danger: "#ff0055",
+        tokenA: "#ff007a", // Match primary
+        tokenB: "#00f0ff", // Match secondary
+        lpToken: "#8a2be2", // Match accent
       },
       fontFamily: {
         sans: ["Outfit", "Inter", "sans-serif"],

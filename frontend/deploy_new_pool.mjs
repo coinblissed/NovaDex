@@ -13,7 +13,7 @@ const TOKEN_A = "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC"; // X
 const TOKEN_B = "CCUUYZWLVQ4QLFFPE4CBGTP7Q6JSPZ7HF54ETS5C2BSG7XPG4KLX6SFH"; // SDKE
 
 async function deployPool() {
-  console.log("Deploying new pool for Aura DEX...");
+  console.log("Deploying new pool for NovaDEX...");
   console.log("Token A (XLM):", TOKEN_A);
   console.log("Token B (SDKE):", TOKEN_B);
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,30 +6,65 @@
 
 @layer base {
   body {
-    @apply bg-background text-zinc-100 font-sans antialiased;
+    @apply bg-background text-slate-100 font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 0% 0%, rgba(255, 0, 122, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
   }
 }
 
 @layer components {
   .nova-bg {
-    @apply fixed inset-0 pointer-events-none bg-background;
+    @apply fixed inset-0 pointer-events-none;
+    background: radial-gradient(circle at 50% -20%, rgba(255, 0, 122, 0.15), transparent 70%);
   }
 
   .crystal-glass {
-    @apply bg-zinc-900/50 border border-zinc-800 rounded-2xl shadow-sm;
+    @apply bg-[#0c0a1d]/60 backdrop-blur-xl border border-border shadow-[0_0_40px_rgba(0,240,255,0.1)];
   }
 
   .crystal {
-    @apply relative overflow-hidden bg-zinc-900/30 border border-zinc-800 rounded-2xl;
+    @apply relative overflow-hidden backdrop-blur-md bg-[#121026]/80 border border-border shadow-[0_0_30px_rgba(255,0,122,0.05)];
+    background-image: linear-gradient(135deg, rgba(255, 0, 122, 0.03) 0%, rgba(0, 240, 255, 0.03) 100%);
+  }
+
+  .crystal::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none opacity-20;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.2) 50%, transparent 100%);
+    transform: translateX(-100%);
+    animation: hologlide 4s ease-in-out infinite;
   }
 
   .glass-input {
-    @apply bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 focus:outline-none focus:border-zinc-500 transition-all font-medium text-zinc-100 placeholder-zinc-500;
+    @apply bg-[#080711]/50 border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-secondary/50 focus:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all font-medium text-slate-100 placeholder-slate-500;
   }
 
   .btn-nova {
-    @apply relative overflow-hidden bg-white text-black font-semibold rounded-xl px-6 py-3 transition-all active:scale-95 flex items-center justify-center gap-2 tracking-wide hover:bg-zinc-200 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-accent text-white font-black rounded-xl px-6 py-4 transition-all active:scale-95 shadow-[0_0_30px_rgba(255,0,122,0.4)] flex items-center justify-center gap-2 uppercase tracking-wider;
   }
+
+  .btn-nova:disabled {
+    @apply opacity-50 shadow-none cursor-not-allowed;
+  }
+
+  .btn-nova::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full;
+    animation: shimmer 3s infinite;
+  }
+}
+
+@keyframes hologlide {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
 }
 
 /* Custom Scrollbar */
@@ -42,7 +77,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors;
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
 }
 
 /* Chrome, Safari, Edge, Opera */

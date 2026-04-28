@@ -15,8 +15,8 @@ fn test_initialize_and_mint() {
     let contract_id = env.register_contract(None, TokenContract);
     let client = TokenContractClient::new(&env, &contract_id);
 
-    let name = String::from_str(&env, "Aura Token");
-    let symbol = String::from_str(&env, "AURA");
+    let name = String::from_str(&env, "Nova Token");
+    let symbol = String::from_str(&env, "NOVA");
     let decimals = 7;
 
     client.initialize(&admin, &minter, &name, &symbol, &decimals);
@@ -49,8 +49,8 @@ fn test_transfer() {
     client.initialize(
         &admin,
         &minter,
-        &String::from_str(&env, "Aura Token"),
-        &String::from_str(&env, "AURA"),
+        &String::from_str(&env, "Nova Token"),
+        &String::from_str(&env, "NOVA"),
         &7,
     );
 
@@ -78,8 +78,8 @@ fn test_allowance_and_transfer_from() {
     client.initialize(
         &admin,
         &minter,
-        &String::from_str(&env, "Aura Token"),
-        &String::from_str(&env, "AURA"),
+        &String::from_str(&env, "Nova Token"),
+        &String::from_str(&env, "NOVA"),
         &7,
     );
 
@@ -112,8 +112,8 @@ fn test_unauthorized_mint() {
     client.initialize(
         &admin,
         &minter,
-        &String::from_str(&env, "Aura Token"),
-        &String::from_str(&env, "AURA"),
+        &String::from_str(&env, "Nova Token"),
+        &String::from_str(&env, "NOVA"),
         &7,
     );
 

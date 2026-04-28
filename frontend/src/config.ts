@@ -52,7 +52,7 @@ export const TOKENS = {
   TOKEN_B: {
     id: ORIGINAL_TOKEN_B_ID,
     symbol: "SDKE",
-    name: "Aura Engine",
+    name: "Nova Engine",
     decimals: 7,
     color: "#f59e0b",
     asset: SDKE_ASSET,
