@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ArrowDown, Info, Loader2, Droplets, ExternalLink, CheckCircle2, AlertTriangle, Zap, Coins } from "lucide-react";
 import { useSwap } from "../hooks/useSwap";
 import { useWallet } from "../hooks/useWallet";
-import { cn } from "../lib/utils";
 import { mintTestTokens, establishTrustline } from "../utils/faucet";
 
 export const SwapCard: React.FC = () => {
@@ -48,38 +47,35 @@ export const SwapCard: React.FC = () => {
 
 
   return (
-    <div className="crystal rounded-2xl p-8 relative overflow-hidden group border-secondary/20 shadow-[0_0_50px_rgba(0,240,255,0.1)]">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
-      
+    <div className="crystal rounded-2xl p-6 border border-zinc-800 bg-zinc-900/30">
       <div className="relative z-10 space-y-6">
         {/* Header */}
         <div className="flex justify-between items-center px-1">
           <div className="flex items-center gap-2">
-            <Coins className="w-4 h-4 text-secondary" />
-            <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-300">Exchange Assets</span>
+            <Coins className="w-4 h-4 text-zinc-400" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-300">Exchange Assets</span>
           </div>
           <button 
             onClick={switchTokens}
-            className="p-2.5 bg-[#080711]/80 hover:bg-secondary/20 border border-secondary/30 rounded-xl transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,240,255,0.3)]"
+            className="p-2 bg-zinc-950 border border-zinc-800 rounded-xl transition-all duration-200"
           >
-            <Zap className="w-3.5 h-3.5 text-secondary" />
+            <Zap className="w-3.5 h-3.5 text-zinc-400" />
           </button>
         </div>
 
         {/* Input Sections */}
         <div className="space-y-3">
           {/* FROM */}
-          <div className="bg-[#080711]/60 border border-secondary/20 rounded-xl p-6 transition-all focus-within:border-secondary/50 focus-within:shadow-[0_0_20px_rgba(0,240,255,0.15)] group/input">
-            <div className="flex justify-between items-center mb-4">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">You Pay</span>
-              <div className="flex items-center gap-3">
-                <span className="text-[10px] font-bold text-slate-400">Balance: <span className="text-slate-200 font-mono">{balanceIn}</span></span>
+          <div className="bg-zinc-950 border border-zinc-800 rounded-xl p-5 transition-all focus-within:border-zinc-700">
+            <div className="flex justify-between items-center mb-3">
+              <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">You Pay</span>
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-medium text-zinc-500">Balance: <span className="text-zinc-300 font-mono">{balanceIn}</span></span>
                 {isConnected && (
                   <button
                     onClick={onFaucet}
                     disabled={faucetLoading}
-                    className="flex items-center gap-1 text-[10px] font-black text-secondary hover:text-primary transition-colors disabled:opacity-30 uppercase tracking-widest border border-secondary/20 hover:border-primary/30 px-2 py-0.5 rounded-md bg-secondary/5"
+                    className="flex items-center gap-1 text-[9px] font-medium text-zinc-400 hover:text-white transition-colors disabled:opacity-30 uppercase tracking-widest border border-zinc-800 px-2 py-0.5 rounded-md bg-zinc-900"
                   >
                     {faucetLoading ? <Loader2 className="w-2.5 h-2.5 animate-spin" /> : <Droplets className="w-2.5 h-2.5" />}
                     Faucet
@@ -93,29 +89,29 @@ export const SwapCard: React.FC = () => {
                 placeholder="0.00"
                 value={amountIn}
                 onChange={(e) => setAmountIn(e.target.value)}
-                className="bg-transparent text-4xl font-black text-white focus:outline-none w-full placeholder:text-slate-800 tracking-tight"
+                className="bg-transparent text-3xl font-bold text-white focus:outline-none w-full placeholder:text-zinc-800 tracking-tight"
               />
-              <div className="flex items-center gap-2.5 bg-[#121026] pl-2.5 pr-4 py-2 rounded-xl border border-secondary/30 shadow-lg">
-                <div className="w-6 h-6 rounded-md shadow-lg flex items-center justify-center font-black text-[10px] text-white" style={{ backgroundColor: tokenIn.color }}>
+              <div className="flex items-center gap-2 bg-zinc-900 px-3 py-1.5 rounded-xl border border-zinc-800">
+                <div className="w-5 h-5 rounded-md flex items-center justify-center font-bold text-[10px] text-zinc-950 bg-white">
                   {tokenIn.symbol[0]}
                 </div>
-                <span className="font-black text-xs tracking-wider text-slate-200">{tokenIn.symbol}</span>
+                <span className="font-semibold text-xs tracking-wider text-zinc-200">{tokenIn.symbol}</span>
               </div>
             </div>
           </div>
 
           {/* Divider */}
-          <div className="flex justify-center -my-6 relative z-20">
-            <div className="w-10 h-10 rounded-xl bg-[#080711] border border-secondary/30 flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.2)] hover:border-primary/50 transition-colors duration-300 cursor-pointer" onClick={switchTokens}>
-              <ArrowDown className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
+          <div className="flex justify-center -my-5 relative z-20">
+            <div className="w-8 h-8 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center transition-colors duration-200 cursor-pointer" onClick={switchTokens}>
+              <ArrowDown className="w-4 h-4 text-zinc-400" />
             </div>
           </div>
 
           {/* TO */}
-          <div className="bg-[#080711]/60 border border-secondary/20 rounded-xl p-6 transition-all focus-within:border-secondary/50 focus-within:shadow-[0_0_20px_rgba(0,240,255,0.15)]">
-            <div className="flex justify-between items-center mb-4">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">You Receive (Est)</span>
-              <span className="text-[10px] font-bold text-slate-400">Balance: <span className="text-slate-200 font-mono">{balanceOut}</span></span>
+          <div className="bg-zinc-950 border border-zinc-800 rounded-xl p-5 transition-all focus-within:border-zinc-700">
+            <div className="flex justify-between items-center mb-3">
+              <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">You Receive (Est)</span>
+              <span className="text-[10px] font-medium text-zinc-500">Balance: <span className="text-zinc-300 font-mono">{balanceOut}</span></span>
             </div>
             <div className="flex items-center justify-between gap-4">
               <div className="relative w-full">
@@ -124,17 +120,17 @@ export const SwapCard: React.FC = () => {
                   placeholder="0.00"
                   value={amountOut}
                   readOnly
-                  className="bg-transparent text-4xl font-black text-white focus:outline-none w-full cursor-default placeholder:text-slate-800 tracking-tight"
+                  className="bg-transparent text-3xl font-bold text-white focus:outline-none w-full cursor-default placeholder:text-zinc-800 tracking-tight"
                 />
                 {isQuoteLoading && (
-                  <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-transparent via-secondary/10 to-transparent animate-[shimmer_1.5s_infinite]" />
+                  <div className="absolute left-0 top-0 w-24 h-full bg-zinc-800/20 animate-pulse" />
                 )}
               </div>
-              <div className="flex items-center gap-2.5 bg-[#121026] pl-2.5 pr-4 py-2 rounded-xl border border-secondary/30 shadow-lg">
-                <div className="w-6 h-6 rounded-md shadow-lg flex items-center justify-center font-black text-[10px] text-white" style={{ backgroundColor: tokenOut.color }}>
+              <div className="flex items-center gap-2 bg-zinc-900 px-3 py-1.5 rounded-xl border border-zinc-800">
+                <div className="w-5 h-5 rounded-md flex items-center justify-center font-bold text-[10px] text-zinc-950 bg-white">
                   {tokenOut.symbol[0]}
                 </div>
-                <span className="font-black text-xs tracking-wider text-slate-200">{tokenOut.symbol}</span>
+                <span className="font-semibold text-xs tracking-wider text-zinc-200">{tokenOut.symbol}</span>
               </div>
             </div>
           </div>
@@ -142,29 +138,26 @@ export const SwapCard: React.FC = () => {
 
         {/* Quote Intelligence */}
         {quote && (
-          <div className="bg-[#080711]/40 rounded-xl p-5 space-y-3 border border-secondary/20 shadow-inner">
+          <div className="bg-zinc-950/50 rounded-xl p-4 space-y-2 border border-zinc-800">
             {[
               ["Execution Rate", parseFloat(quote.executionPrice) > 0 
                 ? `1 ${tokenIn.symbol} = ${quote.executionPrice} ${tokenOut.symbol}`
                 : "Empty Pool"],
-              ["Price Impact", quote.priceImpactPercent, quote.isHighImpact],
+              ["Price Impact", quote.priceImpactPercent],
               ["Liquidity Fee", `${quote.feePaid} ${tokenIn.symbol}`],
               ["Min. Received", `${quote.minimumReceived} ${tokenOut.symbol}`],
-            ].map(([label, value, isWarning]) => (
-              <div key={String(label)} className="flex justify-between items-center text-xs font-bold">
-                <span className="text-slate-400 flex items-center gap-1.5 uppercase tracking-widest text-[10px]">
-                  {label} {label === "Price Impact" && <Info className="w-3.5 h-3.5 opacity-50 text-secondary" />}
+            ].map(([label, value]) => (
+              <div key={String(label)} className="flex justify-between items-center text-xs">
+                <span className="text-zinc-500 flex items-center gap-1 uppercase tracking-widest text-[9px]">
+                  {label} {label === "Price Impact" && <Info className="w-3 h-3 opacity-50 text-zinc-400" />}
                 </span>
-                <span className={cn(
-                  "font-mono font-black", 
-                  isWarning || (label === "Rate" && parseFloat(quote.executionPrice) === 0) ? "text-warning" : "text-secondary"
-                )}>
+                <span className="font-mono text-zinc-300 font-medium">
                   {String(value)}
                 </span>
               </div>
             ))}
             {parseFloat(quote.executionPrice) === 0 && (
-              <div className="mt-4 p-3 bg-danger/10 border border-danger/20 rounded-xl text-[10px] text-danger text-center font-black uppercase tracking-wider leading-relaxed">
+              <div className="mt-2 p-2 bg-zinc-800 text-[9px] text-zinc-400 text-center font-medium uppercase tracking-wider leading-relaxed border border-zinc-700 rounded-lg">
                 ⚠️ Empty Pool! Add liquidity in the pool tab first.
               </div>
             )}
@@ -175,10 +168,10 @@ export const SwapCard: React.FC = () => {
         <button
           onClick={isConnected ? executeSwap : connectWallet}
           disabled={isConnected && (!amountIn || isQuoteLoading || txStatus.status === "pending" || !quote)}
-          className="btn-nova w-full group/btn shadow-[0_0_30px_rgba(255,0,122,0.3)] hover:shadow-[0_0_40px_rgba(255,0,122,0.5)] transition-all duration-300"
+          className="btn-nova w-full shadow-none"
         >
-          {txStatus.status === "pending" && <Loader2 className="w-5 h-5 animate-spin" />}
-          <span className="tracking-widest font-black">
+          {txStatus.status === "pending" && <Loader2 className="w-4 h-4 animate-spin" />}
+          <span className="tracking-wide font-semibold text-xs">
             {!isConnected ? "CONNECT WALLET" : txStatus.status === "pending" ? txStatus.step.toUpperCase() : "EXECUTE SWAP"}
           </span>
         </button>
@@ -192,15 +185,14 @@ export const SwapCard: React.FC = () => {
           <div className="relative z-10 w-full flex flex-col items-center">
             {txStatus.status === "pending" && (
               <>
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 rounded-full border-[3px] border-primary/20" />
-                  <div className="absolute inset-0 w-20 h-20 rounded-full border-[3px] border-primary border-t-transparent animate-spin" />
-                  <Zap className="absolute inset-0 m-auto w-8 h-8 text-primary animate-pulse" />
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 rounded-full border-2 border-zinc-800" />
+                  <div className="absolute inset-0 w-16 h-16 rounded-full border-2 border-white border-t-transparent animate-spin" />
                 </div>
-                <h3 className="text-2xl font-black tracking-tighter mb-2 text-white uppercase">{txStatus.step}</h3>
-                <p className="text-[10px] text-slate-500 font-mono tracking-widest animate-pulse">TRANSMITTING TO NOVA NETWORK...</p>
+                <h3 className="text-xl font-semibold tracking-tight mb-1 text-white uppercase">{txStatus.step}</h3>
+                <p className="text-[10px] text-zinc-500 font-mono tracking-widest">TRANSMITTING TO AURA NETWORK...</p>
                 {txStatus.hash && (
-                  <p className="mt-6 text-[10px] text-primary font-mono bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                  <p className="mt-4 text-[10px] text-zinc-400 font-mono bg-zinc-950 px-3 py-1 rounded-full border border-zinc-800">
                     TX: {txStatus.hash.slice(0, 8)}...{txStatus.hash.slice(-8)}
                   </p>
                 )}
@@ -209,28 +201,28 @@ export const SwapCard: React.FC = () => {
 
             {txStatus.status === "success" && (
               <>
-                <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mb-8 border border-success/30 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
-                  <CheckCircle2 className="w-10 h-10 text-success" />
+                <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mb-6 border border-zinc-800">
+                  <CheckCircle2 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-black tracking-tighter mb-2 text-white">SWAP COMPLETE</h3>
-                <p className="text-sm text-slate-400 font-medium max-w-[280px] leading-relaxed mb-10">
+                <h3 className="text-2xl font-semibold tracking-tight mb-2 text-white">SWAP COMPLETE</h3>
+                <p className="text-xs text-zinc-400 font-normal max-w-[260px] leading-relaxed mb-8">
                   Your assets have been successfully exchanged. Wallet balances are reflecting the update.
                 </p>
                 
-                <div className="flex flex-col w-full gap-3">
+                <div className="flex flex-col w-full gap-2">
                   {txStatus.explorerUrl && (
                     <a
                       href={txStatus.explorerUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-white/10 transition-all"
+                      className="flex items-center justify-center gap-2 px-4 py-2.5 bg-zinc-900 border border-zinc-800 rounded-xl text-xs font-medium tracking-wide hover:bg-zinc-800 transition-all"
                     >
-                      <ExternalLink className="w-4 h-4" /> View on Explorer
+                      <ExternalLink className="w-3.5 h-3.5" /> View on Explorer
                     </a>
                   )}
                   <button
                     onClick={() => window.location.reload()}
-                    className="btn-nova !shadow-success/20 !bg-success/80 hover:!bg-success"
+                    className="btn-nova"
                   >
                     RETURN TO DASHBOARD
                   </button>
@@ -240,17 +232,17 @@ export const SwapCard: React.FC = () => {
 
             {txStatus.status === "fail" && (
               <>
-                <div className="w-20 h-20 bg-danger/10 rounded-full flex items-center justify-center mb-8 border border-danger/30">
-                  <AlertTriangle className="w-10 h-10 text-danger" />
+                <div className="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mb-6 border border-zinc-800">
+                  <AlertTriangle className="w-8 h-8 text-zinc-400" />
                 </div>
-                <h3 className="text-2xl font-black tracking-tighter mb-2 text-white">SWAP FAILED</h3>
-                <div className="bg-black/40 p-4 rounded-2xl border border-danger/20 mb-10 w-full">
-                  <p className="text-[10px] text-danger font-mono uppercase tracking-widest mb-1">Reason</p>
-                  <p className="text-xs text-slate-300 font-medium">{txStatus.error?.message || "Contract simulation failed. Check slippage or balance."}</p>
+                <h3 className="text-xl font-semibold tracking-tight mb-2 text-white">SWAP FAILED</h3>
+                <div className="bg-zinc-950 p-4 rounded-xl border border-zinc-800 mb-8 w-full">
+                  <p className="text-[9px] text-zinc-500 font-mono uppercase tracking-widest mb-1">Reason</p>
+                  <p className="text-xs text-zinc-300 font-normal">{txStatus.error?.message || "Contract simulation failed. Check slippage or balance."}</p>
                 </div>
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full py-4 bg-white/5 hover:bg-white/10 rounded-2xl text-xs font-black uppercase tracking-widest border border-white/10 transition-all"
+                  className="w-full py-3 bg-zinc-900 hover:bg-zinc-800 rounded-xl text-xs font-medium tracking-wide border border-zinc-800 transition-all"
                 >
                   DISMISS & RETRY
                 </button>
