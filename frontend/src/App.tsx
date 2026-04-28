@@ -30,7 +30,7 @@ const App: React.FC = () => {
               <span className="text-zinc-400">Seamless Trading.</span>
             </h1>
             <p className="text-zinc-400 text-sm md:text-base font-normal max-w-2xl mx-auto leading-relaxed">
-              Experience the next generation of AMM on AuraDEX. Deep liquidity, ultra-low fees, and a minimalist interface.
+              Experience the next generation of AMM on MinSwap. Deep liquidity, ultra-low fees, and a minimalist interface.
             </p>
           </div>
 
@@ -168,10 +168,10 @@ const App: React.FC = () => {
               <div className="w-8 h-8 bg-zinc-800 rounded-lg flex items-center justify-center">
                 <Activity className="text-zinc-100 w-4 h-4" />
               </div>
-              <span className="text-lg font-semibold tracking-tight text-white">AuraDEX</span>
+              <span className="text-lg font-semibold tracking-tight text-white">MinSwap</span>
             </div>
             <p className="text-zinc-400 text-xs max-w-sm font-normal leading-relaxed">
-              The premier liquidity protocol for the Aura ecosystem. High-fidelity trading powered by advanced Soroban logic.
+              The premier liquidity protocol for the MinSwap ecosystem. High-fidelity trading powered by advanced Soroban logic.
             </p>
           </div>
           <div className="flex flex-col md:items-end gap-4">
@@ -181,7 +181,7 @@ const App: React.FC = () => {
               <a href="#" className="hover:text-white transition-colors">Security</a>
             </div>
             <p className="text-[9px] text-zinc-600 font-mono uppercase tracking-[0.3em]">
-              V1.0.0-AURA — AURA GLOBAL 2026
+              V1.0.0-MIN — MINSWAP GLOBAL 2026
             </p>
           </div>
         </div>

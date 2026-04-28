@@ -190,7 +190,7 @@ export const SwapCard: React.FC = () => {
                   <div className="absolute inset-0 w-16 h-16 rounded-full border-2 border-white border-t-transparent animate-spin" />
                 </div>
                 <h3 className="text-xl font-semibold tracking-tight mb-1 text-white uppercase">{txStatus.step}</h3>
-                <p className="text-[10px] text-zinc-500 font-mono tracking-widest">TRANSMITTING TO AURA NETWORK...</p>
+                <p className="text-[10px] text-zinc-500 font-mono tracking-widest">TRANSMITTING TO MINSWAP NETWORK...</p>
                 {txStatus.hash && (
                   <p className="mt-4 text-[10px] text-zinc-400 font-mono bg-zinc-950 px-3 py-1 rounded-full border border-zinc-800">
                     TX: {txStatus.hash.slice(0, 8)}...{txStatus.hash.slice(-8)}

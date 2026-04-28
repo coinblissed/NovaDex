@@ -13,10 +13,10 @@ export const Navbar: React.FC = () => {
             <Activity className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="font-semibold text-lg tracking-tight text-white leading-none">Aura <span className="text-zinc-400">DEX</span></h1>
+            <h1 className="font-semibold text-lg tracking-tight text-white leading-none">Min<span className="text-zinc-400">Swap</span></h1>
             <div className="flex items-center gap-1.5 mt-1">
               <div className="w-1.5 h-1.5 rounded-full bg-success" />
-              <span className="text-[9px] text-zinc-400 uppercase tracking-widest font-medium">Aura Testnet</span>
+              <span className="text-[9px] text-zinc-400 uppercase tracking-widest font-medium">MinSwap Testnet</span>
             </div>
           </div>
         </div>
