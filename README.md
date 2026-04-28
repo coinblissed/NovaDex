@@ -46,24 +46,7 @@ The MinSwap features a bespoke design system called **Cyber-Holographic**, which
 
 ## 📸 Screenshots
 
-### Desktop Dashboard
 
-![Dashboard](public/screenshots/dashboard_noir.png)
-
-
-### Swap Interface
-
-![Swap Interface](public/screenshots/swap_interface_noir.png)
-
-
-### Add Liquidity
-
-![Add Liquidity](public/screenshots/liquidity_noir.png)
-
-
-### Transaction Success
-
-![Transaction Success](public/screenshots/success_noir.png)
 
 
 ### Mobile View - Landing
@@ -76,9 +59,12 @@ The MinSwap features a bespoke design system called **Cyber-Holographic**, which
 ![Mobile Swap](public/screenshots/mobile_swap.png)
 
 
-### Video Walkthrough
+### Mobile View - Pool Management
 
-![Demo Walkthrough](public/screenshots/demo.gif)
+![Mobile Pool](public/screenshots/mobile_pool.png)
+
+
+
 
 ## 🧪 Testing
 
