@@ -8,9 +8,9 @@
   body {
     @apply bg-background text-slate-100 font-sans antialiased overflow-x-hidden;
     background-image: 
-      radial-gradient(circle at 0% 0%, rgba(255, 0, 122, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
     background-attachment: fixed;
   }
 }
@@ -18,36 +18,36 @@
 @layer components {
   .nova-bg {
     @apply fixed inset-0 pointer-events-none;
-    background: radial-gradient(circle at 50% -20%, rgba(255, 0, 122, 0.15), transparent 70%);
+    background: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.08), transparent 70%);
   }
 
   .crystal-glass {
-    @apply bg-[#0c0a1d]/60 backdrop-blur-xl border border-border shadow-[0_0_40px_rgba(0,240,255,0.1)];
+    @apply bg-[#0a0a0a]/60 backdrop-blur-xl border border-border shadow-[0_0_40px_rgba(255,255,255,0.05)];
   }
 
   .crystal {
-    @apply relative overflow-hidden backdrop-blur-md bg-[#121026]/80 border border-border shadow-[0_0_30px_rgba(255,0,122,0.05)];
-    background-image: linear-gradient(135deg, rgba(255, 0, 122, 0.03) 0%, rgba(0, 240, 255, 0.03) 100%);
+    @apply relative overflow-hidden backdrop-blur-md bg-[#0d0d0d]/80 border border-border shadow-[0_0_30px_rgba(255,255,255,0.03)];
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   .crystal::before {
     content: '';
     @apply absolute inset-0 pointer-events-none opacity-20;
-    background: linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.2) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
     transform: translateX(-100%);
     animation: hologlide 4s ease-in-out infinite;
   }
 
   .glass-input {
-    @apply bg-[#080711]/50 border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-secondary/50 focus:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all font-medium text-slate-100 placeholder-slate-500;
+    @apply bg-[#050505]/50 border border-border rounded-xl px-4 py-3 focus:outline-none focus:border-white/50 focus:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all font-medium text-slate-100 placeholder-slate-500;
   }
 
   .btn-nova {
-    @apply relative overflow-hidden bg-gradient-to-r from-primary to-accent text-white font-black rounded-xl px-6 py-4 transition-all active:scale-95 shadow-[0_0_30px_rgba(255,0,122,0.4)] flex items-center justify-center gap-2 uppercase tracking-wider;
+    @apply relative overflow-hidden bg-white text-black font-black rounded-xl px-6 py-4 transition-all active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2 uppercase tracking-wider hover:bg-neutral-200;
   }
 
   .btn-nova:disabled {
-    @apply opacity-50 shadow-none cursor-not-allowed;
+    @apply opacity-50 shadow-none cursor-not-allowed bg-neutral-800 text-neutral-500 hover:bg-neutral-800;
   }
 
   .btn-nova::after {
