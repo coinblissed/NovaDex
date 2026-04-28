@@ -9,8 +9,8 @@ export const Navbar: React.FC = () => {
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
       <div className="bg-[#030303]/90 backdrop-blur-xl border border-neutral-800 rounded-2xl px-6 py-4 flex justify-between items-center shadow-[0_0_50px_rgba(0,0,0,0.5)]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md transition-transform hover:scale-110 duration-300">
-            <Activity className="text-black w-6 h-6" />
+          <div className="w-10 h-10 bg-gradient-to-r from-[#ff007a] to-[#7928ca] rounded-xl flex items-center justify-center shadow-lg transition-transform hover:scale-110 duration-300">
+            <Activity className="text-white w-6 h-6" />
           </div>
           <div>
             <h1 className="font-black text-xl tracking-wider text-white leading-none uppercase">Nova <span className="text-[#00f0ff]">DEX</span></h1>
