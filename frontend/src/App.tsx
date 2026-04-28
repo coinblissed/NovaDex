@@ -33,12 +33,13 @@ const App: React.FC = () => {
               <Zap className="w-3 h-3 text-white" />
               Soroban Live on Testnet
             </div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase italic">
-              Liquid Assets, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-400 via-white to-neutral-400 shadow-sm">Seamless Trading.</span>
+            <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase italic leading-tight">
+              Liquid Assets,<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff007a] to-[#7928ca]">Seamless</span><br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7928ca] to-[#00f0ff]">Trading.</span>
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-              Experience the next generation of AMM on NovaDEX. Deep liquidity, ultra-low fees, and a minimalist interface.
+              Experience the next generation of AMM on NovaDEX. Deep liquidity, ultra-low fees, and a UI that feels like the future.
             </p>
           </div>
 
@@ -52,7 +53,7 @@ const App: React.FC = () => {
                   onClick={() => setActiveTab("swap")}
                   className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-lg font-black transition-all duration-300 text-xs uppercase tracking-widest ${
                     activeTab === "swap" 
-                      ? "bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.15)] scale-100" 
+                      ? "bg-gradient-to-r from-[#ff007a] to-[#7928ca] text-white shadow-[0_0_20px_rgba(255,0,122,0.3)] scale-100" 
                       : "text-neutral-500 hover:text-neutral-300 hover:bg-[#0d0d0d]/40"
                   }`}
                 >
@@ -62,7 +63,7 @@ const App: React.FC = () => {
                   onClick={() => setActiveTab("pool")}
                   className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-lg font-black transition-all duration-300 text-xs uppercase tracking-widest ${
                     activeTab === "pool" 
-                      ? "bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.15)] scale-100" 
+                      ? "bg-gradient-to-r from-[#ff007a] to-[#7928ca] text-white shadow-[0_0_20px_rgba(255,0,122,0.3)] scale-100" 
                       : "text-neutral-500 hover:text-neutral-300 hover:bg-[#0d0d0d]/40"
                   }`}
                 >

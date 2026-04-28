@@ -13,10 +13,10 @@ export const Navbar: React.FC = () => {
             <Activity className="text-black w-6 h-6" />
           </div>
           <div>
-            <h1 className="font-black text-xl tracking-wider text-white leading-none uppercase">Nova <span className="text-neutral-400">DEX</span></h1>
+            <h1 className="font-black text-xl tracking-wider text-white leading-none uppercase">Nova <span className="text-[#00f0ff]">DEX</span></h1>
             <div className="flex items-center gap-1.5 mt-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-              <span className="text-[9px] text-neutral-400 uppercase tracking-widest font-black">Nova Testnet</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-[#00f0ff] animate-ping" />
+              <span className="text-[9px] text-[#00f0ff] uppercase tracking-widest font-black">Nova Testnet</span>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
             <button
               onClick={connectWallet}
               disabled={isLoading}
-              className="btn-nova !py-3 !px-6 text-xs font-black tracking-widest shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+              className="bg-gradient-to-r from-[#ff007a] to-[#7928ca] text-white font-black rounded-xl py-3 px-6 text-xs tracking-widest shadow-[0_0_20px_rgba(255,0,122,0.3)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2 uppercase"
             >
               <Wallet className="w-4 h-4" />
               {isLoading ? "Connecting..." : "Connect Wallet"}

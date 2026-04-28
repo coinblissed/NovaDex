@@ -56,14 +56,14 @@ export const SwapCard: React.FC = () => {
         {/* Header */}
         <div className="flex justify-between items-center px-1">
           <div className="flex items-center gap-2">
-            <Coins className="w-4 h-4 text-neutral-400" />
+            <Coins className="w-4 h-4 text-[#00f0ff]" />
             <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-300">Exchange Assets</span>
           </div>
           <button 
             onClick={switchTokens}
-            className="p-2.5 bg-[#0a0a0a]/80 hover:bg-white/10 border border-neutral-800 rounded-xl transition-all duration-300"
+            className="p-2.5 bg-[#0a0a0a]/80 hover:bg-[#00f0ff]/10 border border-neutral-800 rounded-xl transition-all duration-300"
           >
-            <Zap className="w-3.5 h-3.5 text-white" />
+            <Zap className="w-3.5 h-3.5 text-[#00f0ff]" />
           </button>
         </div>
 
