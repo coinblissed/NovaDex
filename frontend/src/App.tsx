@@ -38,7 +38,7 @@ const App: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-400 via-white to-neutral-400 shadow-sm">Seamless Trading.</span>
             </h1>
             <p className="text-slate-400 text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
-              Experience the next generation of AMM on NoirDEX. Deep liquidity, ultra-low fees, and a UI that feels like the future.
+              Experience the next generation of AMM on NovaDEX. Deep liquidity, ultra-low fees, and a minimalist interface.
             </p>
           </div>
 
@@ -176,10 +176,10 @@ const App: React.FC = () => {
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-md">
                 <Activity className="text-black w-5 h-5" />
               </div>
-              <span className="text-xl font-black tracking-tighter text-white uppercase italic">NoirDEX</span>
+              <span className="text-xl font-black tracking-tighter text-white uppercase italic">NovaDEX</span>
             </div>
             <p className="text-slate-400 text-sm max-w-sm font-medium leading-relaxed">
-              The premier liquidity protocol for the Noir ecosystem. High-fidelity trading powered by advanced Soroban logic.
+              The premier liquidity protocol for the Nova ecosystem. High-fidelity trading powered by advanced Soroban logic.
             </p>
           </div>
           <div className="flex flex-col md:items-end gap-6">
@@ -189,7 +189,7 @@ const App: React.FC = () => {
               <a href="#" className="hover:text-white transition-colors">Security</a>
             </div>
             <p className="text-[10px] text-slate-500 font-mono font-black uppercase tracking-[0.3em]">
-              V1.0.0-NOIR — NOIR GLOBAL 2026
+              V1.0.0-NOVA — NOVA GLOBAL 2026
             </p>
           </div>
         </div>

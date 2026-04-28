@@ -47,7 +47,7 @@
   }
 
   .btn-nova:disabled {
-    @apply opacity-50 shadow-none cursor-not-allowed bg-neutral-800 text-neutral-500 hover:bg-neutral-800;
+    @apply shadow-none cursor-not-allowed bg-neutral-600 text-black/60 hover:bg-neutral-600;
   }
 
   .btn-nova::after {

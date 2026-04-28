@@ -20,8 +20,8 @@ export const PriceChart: React.FC = () => {
           </p>
           <div className="flex items-baseline gap-3">
             <h2 className="text-5xl font-black font-sans text-white tracking-tighter italic">1.1824</h2>
-            <div className="px-2.5 py-1 bg-neutral-800 rounded-lg border border-neutral-700 shadow-none">
-              <span className="text-white text-xs font-black">+2.45%</span>
+            <div className="px-2.5 py-1 bg-emerald-950/30 border border-emerald-800/30 rounded-lg shadow-none">
+              <span className="text-emerald-400 text-xs font-black">+2.45%</span>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export const PriceChart: React.FC = () => {
           <AreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#ffffff" stopOpacity={0.2}/>
+                <stop offset="5%" stopColor="#ff007a" stopOpacity={0.2}/>
                 <stop offset="95%" stopColor="#000000" stopOpacity={0}/>
               </linearGradient>
             </defs>
@@ -77,7 +77,7 @@ export const PriceChart: React.FC = () => {
             <Area 
               type="monotone" 
               dataKey="price" 
-              stroke="#ffffff" 
+              stroke="#ff007a" 
               fillOpacity={1} 
               fill="url(#colorPrice)" 
               strokeWidth={2}
